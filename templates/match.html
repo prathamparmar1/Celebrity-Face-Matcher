@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Face Match</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Celebrity Face Matcher</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/match">Match Your Face</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Find Your Celebrity Lookalike</h1>
+        <p>Upload a photo to see which celebrity you resemble!</p>
+    </section>
+
+    <div class="container">
+        <h1>Upload Your Image</h1>
+        <p>Select an image from your device to match with a celebrity.</p>
+
+        <!-- Upload Form -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput">Choose an image:</label>
+            <input type="file" id="fileInput" name="file" accept="image/*" required>
+            <input type="button" id="uploadButton" value="Upload Photo">
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Result Display -->
+        <div id="resultContainer">
+            <p id="result"></p>
+            <div id="imagesContainer"></div> <!-- To show matched and additional images -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Celebrity Face Matcher. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
